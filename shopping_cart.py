@@ -39,4 +39,50 @@ def to_usd(my_price):
 
 # TODO: write some Python code here to produce the desired output
 
-print(products
+# Explain to the user how to input identifiers
+
+print("PLEASE INPUT ALL PRODUCT IDENTIFIERS ONE BY ONE. WHEN COMPLETE, PLEASE ENTER 'DONE'")
+
+# Get the user inputs and consolidate all of them into a list, until we're done
+# use an infinite loop (while loop)
+
+user_products = []
+
+while True:
+    selected_id = input("Please input a product identifier: ")
+    if selected_id.upper() == "DONE":
+        break
+    else:
+        user_products.append(int(selected_id))
+        # maybe display the selected product's name and price here/now
+
+print("WE HAVE REACHED THE END OF THE LOOP")
+print(user_products)
+
+# Print the grocery store name & website
+
+print("-------------------------------")
+print("RECEIPT: FAST AND FURIOUS FOODS")
+print("    www.f&ffamilyfoods.com")
+print("-------------------------------")
+
+#  The date and time of the beginning of the checkout process, formatted in a human-friendly way (e.g. 2020-02-07 03:54 PM) 
+
+from datetime import date
+from datetime import datetime
+
+now = datetime.now()
+today = date.today()
+
+current_time = now.strftime("%H:%M:%S")
+print("CHECKOUT AT:", today, current_time)
+
+
+
+
+# Perform product lookups to determine product's name and price
+
+for s in selected_id:
+    matching_products = [p for p in products if p["id"] == selected_id]
+    matching_product = matching_products[0]
+    print(matching_product["name"],matching_products["price"])
