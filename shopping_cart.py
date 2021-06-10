@@ -78,11 +78,14 @@ current_time = now.strftime("%H:%M:%S")
 print("CHECKOUT AT:", today, current_time)
 
 
-
-
 # Perform product lookups to determine product's name and price
 
-for s in selected_id:
-    matching_products = [p for p in products if p["id"] == selected_id]
-    matching_product = matching_products[0]
-    print(matching_product["name"],matching_products["price"])
+print("-------------------------------")
+print("PRODUCTS PURCHASED:")
+for s in user_products:
+    matching_products = [p for p in products if p["id"] == s]
+    for i in matching_products:
+        print(">>>",i["name"],to_usd(i["price"]))
+    # matching_products = [p for p in products if p["id"] == selected_id]
+    # matching_product = matching_products[0]
+    # print(matching_product["name"],matching_products["price"])
