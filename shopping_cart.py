@@ -13,28 +13,28 @@ load_dotenv()
 # shopping_cart.py
 
 products = [
-    {"id":1, "name": "Chocolate Sandwich Cookies", "department": "snacks", "aisle": "cookies cakes", "price": 3.50},
-    {"id":2, "name": "All-Seasons Salt", "department": "pantry", "aisle": "spices seasonings", "price": 4.99},
-    {"id":3, "name": "Robust Golden Unsweetened Oolong Tea", "department": "beverages", "aisle": "tea", "price": 2.49},
-    {"id":4, "name": "Smart Ones Classic Favorites Mini Rigatoni With Vodka Cream Sauce", "department": "frozen", "aisle": "frozen meals", "price": 6.99},
-    {"id":5, "name": "Green Chile Anytime Sauce", "department": "pantry", "aisle": "marinades meat preparation", "price": 7.99},
-    {"id":6, "name": "Dry Nose Oil", "department": "personal care", "aisle": "cold flu allergy", "price": 21.99},
-    {"id":7, "name": "Pure Coconut Water With Orange", "department": "beverages", "aisle": "juice nectars", "price": 3.50},
-    {"id":8, "name": "Cut Russet Potatoes Steam N' Mash", "department": "frozen", "aisle": "frozen produce", "price": 4.25},
-    {"id":9, "name": "Light Strawberry Blueberry Yogurt", "department": "dairy eggs", "aisle": "yogurt", "price": 6.50},
-    {"id":10, "name": "Sparkling Orange Juice & Prickly Pear Beverage", "department": "beverages", "aisle": "water seltzer sparkling water", "price": 2.99},
-    {"id":11, "name": "Peach Mango Juice", "department": "beverages", "aisle": "refrigerated", "price": 1.99},
-    {"id":12, "name": "Chocolate Fudge Layer Cake", "department": "frozen", "aisle": "frozen dessert", "price": 18.50},
-    {"id":13, "name": "Saline Nasal Mist", "department": "personal care", "aisle": "cold flu allergy", "price": 16.00},
-    {"id":14, "name": "Fresh Scent Dishwasher Cleaner", "department": "household", "aisle": "dish detergents", "price": 4.99},
-    {"id":15, "name": "Overnight Diapers Size 6", "department": "babies", "aisle": "diapers wipes", "price": 25.50},
-    {"id":16, "name": "Mint Chocolate Flavored Syrup", "department": "snacks", "aisle": "ice cream toppings", "price": 4.50},
-    {"id":17, "name": "Rendered Duck Fat", "department": "meat seafood", "aisle": "poultry counter", "price": 9.99},
-    {"id":18, "name": "Pizza for One Suprema Frozen Pizza", "department": "frozen", "aisle": "frozen pizza", "price": 12.50},
-    {"id":19, "name": "Gluten Free Quinoa Three Cheese & Mushroom Blend", "department": "dry goods pasta", "aisle": "grains rice dried goods", "price": 3.99},
-    {"id":20, "name": "Pomegranate Cranberry & Aloe Vera Enrich Drink", "department": "beverages", "aisle": "juice nectars", "price": 4.25}
+    {"id":1, "name": "Chocolate Sandwich Cookies", "department": "snacks", "aisle": "cookies cakes", "price": 3.50, "price_per": "item"},
+    {"id":2, "name": "All-Seasons Salt", "department": "pantry", "aisle": "spices seasonings", "price": 4.99, "price_per": "item"},
+    {"id":3, "name": "Robust Golden Unsweetened Oolong Tea", "department": "beverages", "aisle": "tea", "price": 2.49, "price_per": "item"},
+    {"id":4, "name": "Smart Ones Classic Favorites Mini Rigatoni With Vodka Cream Sauce", "department": "frozen", "aisle": "frozen meals", "price": 6.99, "price_per": "item"},
+    {"id":5, "name": "Green Chile Anytime Sauce", "department": "pantry", "aisle": "marinades meat preparation", "price": 7.99, "price_per": "item"},
+    {"id":6, "name": "Dry Nose Oil", "department": "personal care", "aisle": "cold flu allergy", "price": 21.99, "price_per": "item"},
+    {"id":7, "name": "Pure Coconut Water With Orange", "department": "beverages", "aisle": "juice nectars", "price": 3.50, "price_per": "item"},
+    {"id":8, "name": "Cut Russet Potatoes Steam N' Mash", "department": "frozen", "aisle": "frozen produce", "price": 4.25, "price_per": "item"},
+    {"id":9, "name": "Light Strawberry Blueberry Yogurt", "department": "dairy eggs", "aisle": "yogurt", "price": 6.50, "price_per": "item"},
+    {"id":10, "name": "Sparkling Orange Juice & Prickly Pear Beverage", "department": "beverages", "aisle": "water seltzer sparkling water", "price": 2.99, "price_per": "item"},
+    {"id":11, "name": "Peach Mango Juice", "department": "beverages", "aisle": "refrigerated", "price": 1.99, "price_per": "item"},
+    {"id":12, "name": "Chocolate Fudge Layer Cake", "department": "frozen", "aisle": "frozen dessert", "price": 18.50, "price_per": "item"},
+    {"id":13, "name": "Saline Nasal Mist", "department": "personal care", "aisle": "cold flu allergy", "price": 16.00, "price_per": "item"},
+    {"id":14, "name": "Fresh Scent Dishwasher Cleaner", "department": "household", "aisle": "dish detergents", "price": 4.99, "price_per": "item"},
+    {"id":15, "name": "Overnight Diapers Size 6", "department": "babies", "aisle": "diapers wipes", "price": 25.50, "price_per": "item"},
+    {"id":16, "name": "Mint Chocolate Flavored Syrup", "department": "snacks", "aisle": "ice cream toppings", "price": 4.50, "price_per": "item"},
+    {"id":17, "name": "Rendered Duck Fat", "department": "meat seafood", "aisle": "poultry counter", "price": 9.99, "price_per": "item"},
+    {"id":18, "name": "Pizza for One Suprema Frozen Pizza", "department": "frozen", "aisle": "frozen pizza", "price": 12.50, "price_per": "item"},
+    {"id":19, "name": "Gluten Free Quinoa Three Cheese & Mushroom Blend", "department": "dry goods pasta", "aisle": "grains rice dried goods", "price": 3.99, "price_per": "item"},
+    {"id":20, "name": "Pomegranate Cranberry & Aloe Vera Enrich Drink", "department": "beverages", "aisle": "juice nectars", "price": 4.25, "price_per": "item"},
+    {"id":21, "name": "Bananas", "department": "grocery", "aisle": "fruit", "price": 0.79, "price_per": "pound"}
 ] # based on data from Instacart: https://www.instacart.com/datasets/grocery-shopping-2017
-
 
 def to_usd(my_price):
     """
@@ -48,6 +48,9 @@ def to_usd(my_price):
     """
     return f"${my_price:,.2f}" #> $12,000.71
 
+price_by_pound = [p["id"] for p in products if p["price_per"] == "pound"]
+
+print(price_by_pound)
 
 # TODO: write some Python code here to produce the desired output
 
@@ -59,17 +62,40 @@ print("NOTE: IDENTIFIERS START AT 1")
 # Get the user inputs and consolidate all of them into a list, until we're done
 # use an infinite loop (while loop)
 
+# empty lists for user products and amounts
 user_products = []
+# user_amounts = []
 
+# loop through and populate the lists
 while True:
     selected_id = input("Please input a product identifier: ")
     if selected_id.upper() == "DONE":
         break
     else:
-        user_products.append(int(selected_id))
+        if int(selected_id) in price_by_pound:
+            selected_amount = input("Please input an amount: ")
+            user_products.append(
+                {
+                    "id":selected_id,
+                    "amount":selected_amount,
+                }
+            )
+            # user_products.append(int(selected_id))
+            # user_amounts.append(int(selected_amount))
+        else:
+            user_products.append(
+                {
+                    "id":selected_id,
+                    "amount":1,
+                }
+            )
+            # user_products.append(int(selected_id))
+            # user_amounts.append(int(1))
         # maybe display the selected product's name and price here/now
 
 print("END OF USER INPUTS")
+# print(user_products)
+# print(user_amounts)
 
 # Print the grocery store name & website
 
@@ -94,14 +120,12 @@ items_cost_list = []
 
 print("-------------------------------")
 print("PRODUCTS PURCHASED:")
+print("ITEM...UNITS...PRICE PER UNIT...TOTAL PRICE")
 for s in user_products:
-    matching_products = [p for p in products if p["id"] == s]
+    matching_products = [p for p in products if p["id"] == int(s["id"])]
     for i in matching_products:
-        print(">>>",i["name"],to_usd(i["price"]))
-        items_cost_list.append(float(i["price"]))
-    # matching_products = [p for p in products if p["id"] == selected_id]
-    # matching_product = matching_products[0]
-    # print(matching_product["name"],matching_products["price"])
+        print(">>>",i["name"],"...x",s["amount"],"...",to_usd(i["price"]),"...",to_usd(int(s["amount"])*float(i["price"])))
+        items_cost_list.append(int(s["amount"])*float(i["price"]))
 print("-------------------------------")
 
 # Get total cost pre tax, sales tax, and total cost
