@@ -1,9 +1,14 @@
 # import all packages
 
-
 from datetime import date
 from datetime import datetime
 
+# import dot-env and load the user name from the .env file 
+
+import os
+from dotenv import load_dotenv 
+
+load_dotenv()
 
 # shopping_cart.py
 
@@ -103,11 +108,15 @@ print("-------------------------------")
 
 subtotal = sum(items_cost_list)
 
-sales_tax = 0.0875
+# import sales taxt from the .env file
+
+sales_tax = os.getenv("TAX_RATE", default=0.0875)
+
+# sales_tax = 0.0875
 
 print("SUBTOTAL =",to_usd(subtotal))
-print("SALES TAX =",to_usd(subtotal*sales_tax))
-print("TOTAL =", to_usd(subtotal+subtotal*sales_tax))
+print("SALES TAX =",to_usd(subtotal*float(sales_tax)))
+print("TOTAL =", to_usd(subtotal+subtotal*float(sales_tax)))
 
 # Thank the user
 print("-------------------------------")

@@ -22,6 +22,12 @@ Run the requirements file to install all required third-party packages
 pip install -r requirements.txt
 ```
 
+Open up the repository in a text editor, and create a new .env file. Input your desired sales tax with the following variable 
+
+```
+TAX_RATE=0.0875
+```
+
 ## Execute
 
 Within an active virtual environment of choice ("base" or project-specific), run the Python script from the command line:
