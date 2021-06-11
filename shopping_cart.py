@@ -50,7 +50,7 @@ def to_usd(my_price):
 
 price_by_pound = [p["id"] for p in products if p["price_per"] == "pound"]
 
-print(price_by_pound)
+# print(price_by_pound)
 
 # TODO: write some Python code here to produce the desired output
 
@@ -124,8 +124,8 @@ print("ITEM...UNITS...PRICE PER UNIT...TOTAL PRICE")
 for s in user_products:
     matching_products = [p for p in products if p["id"] == int(s["id"])]
     for i in matching_products:
-        print(">>>",i["name"],"...x",s["amount"],"...",to_usd(i["price"]),"...",to_usd(int(s["amount"])*float(i["price"])))
-        items_cost_list.append(int(s["amount"])*float(i["price"]))
+        print(">>>",i["name"],"...x",s["amount"],"...",to_usd(i["price"]),"...",to_usd(float(s["amount"])*float(i["price"])))
+        items_cost_list.append(float(s["amount"])*float(i["price"]))
 print("-------------------------------")
 
 # Get total cost pre tax, sales tax, and total cost
