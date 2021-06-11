@@ -1,3 +1,10 @@
+# import all packages
+
+
+from datetime import date
+from datetime import datetime
+
+
 # shopping_cart.py
 
 products = [
@@ -42,6 +49,7 @@ def to_usd(my_price):
 # Explain to the user how to input identifiers
 
 print("PLEASE INPUT ALL PRODUCT IDENTIFIERS ONE BY ONE. WHEN COMPLETE, PLEASE ENTER 'DONE'")
+print("NOTE: IDENTIFIERS START AT 1")
 
 # Get the user inputs and consolidate all of them into a list, until we're done
 # use an infinite loop (while loop)
@@ -56,8 +64,7 @@ while True:
         user_products.append(int(selected_id))
         # maybe display the selected product's name and price here/now
 
-print("WE HAVE REACHED THE END OF THE LOOP")
-print(user_products)
+print("END OF USER INPUTS")
 
 # Print the grocery store name & website
 
@@ -68,15 +75,15 @@ print("-------------------------------")
 
 #  The date and time of the beginning of the checkout process, formatted in a human-friendly way (e.g. 2020-02-07 03:54 PM) 
 
-from datetime import date
-from datetime import datetime
-
 now = datetime.now()
 today = date.today()
 
 current_time = now.strftime("%H:%M:%S")
 print("CHECKOUT AT:", today, current_time)
 
+# Set up empty list for consolidating prices
+
+items_cost_list = []
 
 # Perform product lookups to determine product's name and price
 
@@ -86,6 +93,22 @@ for s in user_products:
     matching_products = [p for p in products if p["id"] == s]
     for i in matching_products:
         print(">>>",i["name"],to_usd(i["price"]))
+        items_cost_list.append(float(i["price"]))
     # matching_products = [p for p in products if p["id"] == selected_id]
     # matching_product = matching_products[0]
     # print(matching_product["name"],matching_products["price"])
+print("-------------------------------")
+
+# Get total cost pre tax, sales tax, and total cost
+
+subtotal = sum(items_cost_list)
+
+sales_tax = 0.0875
+
+print("SUBTOTAL =",to_usd(subtotal))
+print("SALES TAX =",to_usd(subtotal*sales_tax))
+print("TOTAL =", to_usd(subtotal+subtotal*sales_tax))
+
+# Thank the user
+print("-------------------------------")
+print("SALUD, MI FAMILIA. COME AGAIN SOON")
