@@ -53,23 +53,24 @@ def to_usd(my_price):
     """
     return f"${my_price:,.2f}" #> $12,000.71
 
+# set up a price per pound list
+
 price_by_pound = [p["id"] for p in products if p["price_per"] == "pound"]
 
-# print(price_by_pound)
+# figure out the last ID in the database
 
-# TODO: write some Python code here to produce the desired output
+num_products = len(products)
 
 # Explain to the user how to input identifiers
 
 print("PLEASE INPUT ALL PRODUCT IDENTIFIERS ONE BY ONE. WHEN COMPLETE, PLEASE ENTER 'DONE'")
-print("NOTE: IDENTIFIERS START AT 1")
+print("NOTE: IDENTIFIERS START AT 1, END AT {}".format(num_products))
 
 # Get the user inputs and consolidate all of them into a list, until we're done
 # use an infinite loop (while loop)
 
 # empty lists for user products and amounts
 user_products = []
-# user_amounts = []
 
 # loop through and populate the lists
 while True:
@@ -85,8 +86,6 @@ while True:
                     "amount":selected_amount,
                 }
             )
-            # user_products.append(int(selected_id))
-            # user_amounts.append(int(selected_amount))
         else:
             user_products.append(
                 {
@@ -94,13 +93,8 @@ while True:
                     "amount":1,
                 }
             )
-            # user_products.append(int(selected_id))
-            # user_amounts.append(int(1))
-        # maybe display the selected product's name and price here/now
 
 print("END OF USER INPUTS")
-# print(user_products)
-# print(user_amounts)
 
 # Print the grocery store name & website
 
