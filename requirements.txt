@@ -1,1 +1,6 @@
 python-dotenv
+
+sendgrid
+
+# optionally install a specific version:
+#pip install sendgrid==6.6.0
