@@ -147,6 +147,8 @@ print("SUBTOTAL =",to_usd(subtotal))
 print("SALES TAX =",to_usd(subtotal*float(sales_tax)))
 print("TOTAL =", to_usd(subtotal+subtotal*float(sales_tax)))
 
+total_amount = to_usd(subtotal+subtotal*float(sales_tax))
+
 # Thank the user
 print("-------------------------------")
 print("SALUD, MI FAMILIA. COME AGAIN SOON")
@@ -164,8 +166,7 @@ if user_wants_email == "y":
 
     subject = "Your Receipt from Fast and Furious Foods"
 
-    html_content = "Hello World"
-    print("HTML:", html_content)
+    html_content = "Purchase on {}, at {}. Total Amount = {}.".format(today,current_time,total_amount)
 
     # FYI: we'll need to use our verified SENDER_ADDRESS as the `from_email` param
     # ... but we can customize the `to_emails` param to send to other addresses

@@ -2,7 +2,7 @@
 
 ## Repo Setup
 
-Use the GitHub online interface to create a new remote project repository called something like "rock-paper-scissors-exercise". 
+Use the GitHub online interface to create a new remote project repository called something like "shopping_cart". 
 
 After creating the remote repo, use GitHub Desktop software or the command-line to download or "clone" it onto your computer. Choose a familiar download location like the Desktop.
 
@@ -34,4 +34,22 @@ Within an active virtual environment of choice ("base" or project-specific), run
 
 ```
 python shopping_cart.py
+```
+
+## Sendgrid Setup 
+
+Sign up for a SendGrid account, and complete your "Single Sender Verification." Check your email to verify your account. 
+
+Create a SendGrid API Key with "full access" permissions. 
+
+In your .env file, create a variable for your SendGrid API Key:
+
+```
+SENDGRID_API_KEY =
+```
+
+Additionally create a variable for your SENDER_ADDRESS. This should be the same email address as the single sender address you just used in your SendGrid account. 
+
+```
+ SENDER_ADDRESS =
 ```
