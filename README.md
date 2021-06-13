@@ -2,11 +2,11 @@
 
 ## Repo Setup
 
-Use the GitHub online interface to create a new remote project repository called something like "shopping_cart". 
+Use the GitHub online interface to create a new remote project repository. Give it the name: "shopping_cart". 
 
-After creating the remote repo, use GitHub Desktop software or the command-line to download or "clone" it onto your computer. Choose a familiar download location like the Desktop.
+After creating the remote repo, use GitHub Desktop software or the command-line to download or "clone" it onto your computer
 
-After cloning the repo, navigate there from the command-line:
+After cloning the repo, navigate there from the command-line. For example:
 
 ```
 cd ~/OneDrive/Desktop/GitHub/shopping-cart
